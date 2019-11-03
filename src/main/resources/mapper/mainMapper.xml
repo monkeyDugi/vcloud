@@ -10,5 +10,7 @@
 			 , SINGER
 			 , TITLE
 		  FROM vcloud.TB_DAY_CHART
+		 ORDER BY RAND()
+		 LIMIT 10
 	</select>
 </mapper>
