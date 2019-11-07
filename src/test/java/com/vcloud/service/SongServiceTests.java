@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
-import com.vcloud.domain.MainRepository;
+import com.vcloud.domain.SongRepository;
 import com.vcloud.domain.Song;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,16 +14,16 @@ import org.mockito.MockitoAnnotations;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainServiceTests {
-    private MainService mainService;
+public class SongServiceTests {
+    private SongService songService;
 
     @Mock
-    private MainRepository mainRepository;
+    private SongRepository songRepository;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mainService = new MainService(mainRepository);
+        songService = new SongService(songRepository);
     }
 
     @Test
@@ -38,10 +38,10 @@ public class MainServiceTests {
                     .title("보고싶다")
                     .build()
         );
-        given(mainRepository.findAll()).willReturn(songs);
+        given(songRepository.findAll()).willReturn(songs);
 
-        assertThat(mainService.getSongs()).isEqualTo(songs);
+        assertThat(songService.getSongs()).isEqualTo(songs);
 
-        verify(mainRepository).findAll();
+        verify(songRepository).findAll();
     }
 }

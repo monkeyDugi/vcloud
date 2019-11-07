@@ -1,7 +1,7 @@
 package com.vcloud.controller;
 
 import com.vcloud.domain.Song;
-import com.vcloud.service.MainService;
+import com.vcloud.service.SongService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,14 +22,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(MainController.class)
-public class MainControllerTests {
+@WebMvcTest(SongController.class)
+public class SongControllerTests {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private MainService mainService;
+    private SongService songService;
 
     @Before
     public void setUp() throws Exception {
@@ -43,7 +43,7 @@ public class MainControllerTests {
                 .build()
         );
 
-        given(mainService.getSongs()).willReturn(songs);
+        given(songService.getSongs()).willReturn(songs);
     }
 
     @Test
@@ -53,14 +53,6 @@ public class MainControllerTests {
 //            객체를 확인하고 싶으면 어떻게 하지?
             .andExpect(content().string(containsString("id")));
 
-            verify(mainService).getSongs();
+            verify(songService).getSongs();
     }
-
-//    @Test
-//    public void songs() throws Exception {
-//        mockMvc.perform(get("/songs"))
-//            .andExpect(status().isOk())
-////            객체를 확인하고 싶으면 어떻게 하지?
-//            .andExpect(content().string(containsString("id")));
-//    }
 }

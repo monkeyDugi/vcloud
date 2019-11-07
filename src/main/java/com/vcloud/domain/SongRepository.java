@@ -5,6 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface MainRepository {
+public interface SongRepository {
     List<Song> findAll() throws Exception;
 }
