@@ -1,3 +1,13 @@
+/*
+ * File Name : SongServiceTests.java
+ * Descript  : 영상정보 서비스 테스트
+ * */
+/*********************************************************
+ *    Date           Dev                     Descript
+ * -------------------------------------------------------
+ * 2019.11.19     monkeyDugi                  start
+ * *******************************************************/
+
 package com.vcloud.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,8 +36,9 @@ public class SongServiceTests {
         songService = new SongService(songRepository);
     }
 
+    // 메인화면 랜덤차트 10개
     @Test
-    public void getSongs() throws Exception{
+    public void getTenRandomSongs() throws Exception{
         List<Song> songs = new ArrayList<>();
 
         songs.add(Song.builder()
@@ -38,10 +49,25 @@ public class SongServiceTests {
                     .title("보고싶다")
                     .build()
         );
-        given(songRepository.findAll()).willReturn(songs);
 
-        assertThat(songService.getSongs()).isEqualTo(songs);
+        given(songRepository.getTenRandomSongs()).willReturn(songs);
 
-        verify(songRepository).findAll();
+        assertThat(songService.getTenRandomSongs()).isEqualTo(songs);
+
+        verify(songRepository).getTenRandomSongs();
+    }
+
+    // 멜론차트 TOP30
+    @Test
+    public void getTopThirtySongs() throws Exception {
+        List<Song> songs = new ArrayList<>();
+
+        songs.add(Song.builder().singer("김범수").build());
+
+        given(songRepository.getTopThirtySongs()).willReturn(songs);
+
+        assertThat(songService.getTopThirtySongs()).isEqualTo(songs);
+
+        verify(songRepository).getTopThirtySongs();
     }
 }

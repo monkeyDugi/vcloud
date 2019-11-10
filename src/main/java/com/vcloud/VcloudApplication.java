@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-// 요놈이 있으면 안된다 이유는?
-//@MapperScan("com.vcloud.domain")
 public class VcloudApplication {
 
 	public static void main(String[] args) {

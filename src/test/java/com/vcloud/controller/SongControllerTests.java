@@ -1,3 +1,13 @@
+/*
+ * File Name : SongControllerTests.java
+ * Descript  : 영상정보 컨트롤러 테스트
+ * */
+/*********************************************************
+ *    Date           Dev                     Descript
+ * -------------------------------------------------------
+ * 2019.11.19     monkeyDugi                  start
+ * *******************************************************/
+
 package com.vcloud.controller;
 
 import com.vcloud.domain.Song;
@@ -31,28 +41,43 @@ public class SongControllerTests {
     @MockBean
     private SongService songService;
 
+    List<Song> songs;
+
     @Before
     public void setUp() throws Exception {
-        List<Song> songs = new ArrayList<>();
+        songs = new ArrayList<>();
+
         songs.add(Song.builder()
-                .id("id")
+                .id("1")
                 .url("url/url")
                 .img_path("jpg")
                 .singer("김범수")
                 .title("보고싶다")
                 .build()
         );
-
-        given(songService.getSongs()).willReturn(songs);
     }
 
+    // 메인화면 랜덤차트 10개
     @Test
-    public void songs() throws Exception {
-        mockMvc.perform(get("/songs"))
-            .andExpect(status().isOk())
-//            객체를 확인하고 싶으면 어떻게 하지?
-            .andExpect(content().string(containsString("id")));
+    public void getTenRandomSongs() throws Exception {
+        given(songService.getTenRandomSongs()).willReturn(songs);
 
-            verify(songService).getSongs();
+        mockMvc.perform(get("/songs/ten"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("김범수")));
+
+        verify(songService).getTenRandomSongs();
+    }
+
+    // 멜론차트 TOP30
+    @Test
+    public void getTopThirtySongs() throws Exception {
+        given(songService.getTopThirtySongs()).willReturn(songs);
+
+        mockMvc.perform(get("/songs/thirty"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("김범수")));
+
+        verify(songService).getTopThirtySongs();
     }
 }

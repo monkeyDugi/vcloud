@@ -1,3 +1,13 @@
+/*
+ * File Name : SongService.java
+ * Descript  : 영상정보 가져오는 Service
+ * */
+/*********************************************************
+ *    Date           Dev                     Descript
+ * -------------------------------------------------------
+ * 2019.11.19     monkeyDugi                  start
+ * *******************************************************/
+
 package com.vcloud.service;
 
 import com.vcloud.domain.SongRepository;
@@ -14,14 +24,18 @@ public class SongService {
     @Autowired
     private SongRepository songRepository;
 
-    private List<Song> songs = new ArrayList<>();
-
 //  테스트 코드 Mock용도
     public SongService(SongRepository songRepository) {
         this.songRepository = songRepository;
     }
 
-    public List<Song> getSongs() throws Exception {
-        return songRepository.findAll();
+    // 메인화면 랜덤차트 10개
+    public List<Song> getTenRandomSongs() throws Exception {
+        return songRepository.getTenRandomSongs();
+    }
+
+    // 멜론차트 TOP30
+    public List<Song> getTopThirtySongs() throws Exception {
+        return songRepository.getTopThirtySongs();
     }
 }
