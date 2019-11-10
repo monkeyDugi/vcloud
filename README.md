@@ -2,17 +2,25 @@
 #REST API와 TDD를 이용한 첫 프로젝트
 
 ###버전
-- Spring4
-- Spring Boot 2.1.9 REALESE
-- junit4
-- MySQL5.7
-- Lombok1.18
-- dozermapper6.5
-- swagger-ui2.9
-- MyBatis3.5
+- Spring Boot : 2.1.9 REALESE
+- junit : 4
+- MySQL : 5.7
+- Lombok : 1.18
+- dozermapper : 6.5
+- swagger-ui : 2.9
+- MyBatis : 3.5
+- Maven : 3.1.1
+- Html : 5
+- JavaScript :
+  => jQuery :
 #
-###API
-- GET /songs => 멜론 일간의 종합차트 10개 랜덤
->>[GET http://localhost:8080/songs](http://localhost:8080/songs)
-- 진행 중......
+###REST API SERVER
+- GET /songs/ten => 멜론 일간의 종합차트 10개 랜덤 [GET http://localhost:8080/songs/ten](http://localhost:8080/songs)
+- GET /songs/thirty => 멜론 일간차트 TOP30 [GET http://localhost:8080/songs/thirty](http://localhost:8080/songs) 
 #
+
+###FRONT
+개발 중..
+#
+
+
