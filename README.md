@@ -16,11 +16,12 @@
 #
 ###REST API SERVER
 - GET /songs/ten => 멜론 일간의 종합차트 10개 랜덤 [GET http://localhost:8080/songs/ten](http://localhost:8080/songs)
-- GET /songs/thirty => 멜론 일간차트 TOP30 [GET http://localhost:8080/songs/thirty](http://localhost:8080/songs) 
+- GET /songs/thirty => 멜론 일간차트 TOP30 [GET http://localhost:8080/songs/thirty](http://localhost:8080/songs)
+- 개발 중 ... 
 #
 
 ###FRONT
-개발 중..
+개발 중 ...
 #
 
 
