@@ -35,7 +35,10 @@ public class SongController {
     @Autowired
     private SongService songService;
 
-    // 메인화면 랜덤차트 10개
+    /*
+    * 노래 리스트
+    * count : 10
+    * */
     @GetMapping("/songs/ten")
     @ApiOperation(value = "랜덤차트", notes = "멜론차트 일간 종합장르에서 랜덤으로 10개를 select")
     public List<SongDto> getTenRandomSongs() throws Exception {
@@ -44,18 +47,6 @@ public class SongController {
         return songs.stream()
                 .map(song -> mapper.map(song, SongDto.class))
                 .collect(Collectors.toList());
-
-        /* stream, dozer 사용 안했을 때 */
-//        List<SongDto> list = new ArrayList<>();
-
-//        for (Song song: songs) {
-//            SongDto songDto = new SongDto(song);
-//
-//            list.add(songDto);
-//        }
-
-//        return list;
-        /* stream, dozer 사용 안했을 때 */
     }
 
     // 멜론차트 TOP30

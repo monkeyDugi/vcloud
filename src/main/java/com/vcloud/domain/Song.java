@@ -19,6 +19,7 @@ import org.apache.ibatis.type.Alias;
 @Alias("song")
 public class Song {
     private String id;
+    private String rank;
     private String url;
     private String img_path;
     private String singer;

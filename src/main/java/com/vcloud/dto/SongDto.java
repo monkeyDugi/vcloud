@@ -18,6 +18,8 @@ import lombok.Data;
 public class SongDto {
     @Mapping("id")
     private String id;
+    @Mapping("rank")
+    private String rank;
     @Mapping("url")
     private String url;
     @Mapping("img_path")

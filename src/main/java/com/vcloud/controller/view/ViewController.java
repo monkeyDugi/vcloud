@@ -21,8 +21,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ViewController {
 
     // 메인화면
-    @GetMapping("/mainView")
+    @GetMapping("/mainTest")
     public String mainView() throws Exception {
-        return "mainTet";
+        return "mainTest";
+    }
+
+    @GetMapping("/chartTest")
+    public String chartView() throws Exception {
+        return "chartTest";
     }
 }

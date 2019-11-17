@@ -6,10 +6,12 @@
 <!-- 랜덤차트 10개 -->
 	<select id="getTenRandomSongs" resultType="song">
 		SELECT ID
+		     , RANK
 			 , URL
 			 , IMG_PATH
 			 , SINGER
 			 , TITLE
+		     , LIVE
 		  FROM vcloud.TB_DAY_CHART
 		 ORDER BY RAND()
 		 LIMIT 10
