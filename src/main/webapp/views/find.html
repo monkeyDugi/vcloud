@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Video Cloud</title>
+<link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- 헤더 -->
+	<header>
+		<h1 class="logo"><a href="index.html"><img src="images/logo2.png" alt=""></a></h1>
+		<div class="btn-menu transition">
+			<span class="b1 transition"></span>
+			<span class="b2 transition"></span>
+			<span class="b3 transition"></span>
+		</div>
+		<nav class="gnb">
+			<ul class="pc_menu">
+				<li><a href="#">CHART</a></li>
+				<li><a href="#">BOARD</a></li>
+				<li><a href="#">MY KEYWORDS</a></li>
+			</ul>
+			<!-- 모바일 메뉴 -->
+			<div class="mb_menu transition">
+				<a href="" class="com_name transition">VideoCloud</a>
+				<ul class="accordeon transition">
+					<li>
+						<a href="#" class="acctitle accbtn en">CHART</a>
+					</li>
+				    <li>
+						<a href="#" class="acctitle accbtn en">BOARD</a>
+				    </li>
+					<li>
+						<a href="#" class="acctitle accbtn en">MY KEYWORDS</a>
+						<ul class="accbody depth2">
+						  <li>
+							<a href="#">
+							  <span class="en">VideoCloud</span>
+							</a>
+						  </li>
+						</ul>
+				    </li>
+				</ul>
+<!-- 				<div class="login">LOGIN</div> -->
+			</div>
+			<!--// 모바일 메뉴 -->
+		</nav>
+		<div class="searchForm">
+			<div class="searchValue">
+				<input type="text" class="searchInput" placeholder="search">
+			</div>
+			<button class="searchBtn"><img src="images/searchBtn.png" alt=""></button>
+		</div>
+		<ul class="topUtil">
+			<li><a href="#">LOGIN</a></li>
+			<li><a href="#">JOIN</a></li>
+		</ul>
+	</header>
+	<!-- // 헤더 -->
+	<!-- 컨텐츠 -->
+	<section id="layout" class="find">
+		<h1 class="vc-title-form">Find member information</h1>
+		<ul class="findMenu">
+			<li><a href="#findMenu_sub1" class="on" onclick="return false">FIND ID</a></li>
+			<li><a href="#findMenu_sub2" onclick="return false">FIND PASSWORD</a></li>
+		</ul>
+		<div class="findMenu_sub vc-input-form" id="findMenu_sub1">
+			<ul>
+				<li><label for="memberName">NAME</label><input type="text" class="memberName"></li>
+				<li><label for="memberMail">MAIL</label><input type="text" class="memberMail"></li>
+			</ul>
+			<div class="vc-btn findMenu_btn"><button type="button">LOGIN</button><button type="button">FIND PASSWORD</button></div>
+		</div>
+		<div class="findMenu_sub vc-input-form" id="findMenu_sub2">
+			<ul>
+				<li><label for="memberName">NAME</label><input type="text" class="memberName"></li>
+				<li><label for="memberMail">MAIL</label><input type="text" class="memberMail"></li>
+				<li><label for="memberid">ID</label><input type="text" class="memberid"></li>
+			</ul>
+			<div class="vc-btn findMenu_btn"><button type="button">RESET PASSWORD</button></div>
+		</div>
+	</section>
+	<!-- // 컨텐츠 -->
+	<!-- 푸터 -->
+	<footer id="footer"></footer>
+	<!-- // 푸터 -->
+</div>
+</body>
+</html>
