@@ -26,8 +26,21 @@ public class ViewController {
         return "mainTest";
     }
 
+    // 차트 화면
     @GetMapping("/chartTest")
     public String chartView() throws Exception {
         return "chartTest";
+    }
+
+    // 마이리스트 화면
+    @GetMapping("/myListTest")
+    public String myListView() throws Exception {
+        return "myListTest";
+    }
+    
+    // iframe Test 화면
+    @GetMapping("/iframeTest")
+    public String iframe() throws Exception {
+    	return "iframeTest";
     }
 }

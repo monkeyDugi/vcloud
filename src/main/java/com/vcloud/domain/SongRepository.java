@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-@Mapper
+//@Mapper
 public interface SongRepository {
     // 메인화면 랜덤차트 10개
     List<Song> getTenRandomSongs() throws Exception;

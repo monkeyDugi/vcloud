@@ -21,21 +21,23 @@ import java.util.List;
 @Service
 public class SongService {
 
-    @Autowired
-    private SongRepository songRepository;
+//    @Autowired
+//    private SongRepository songRepository;
 
 //  테스트 코드 Mock용도
-    public SongService(SongRepository songRepository) {
-        this.songRepository = songRepository;
-    }
+//    public SongService(SongRepository songRepository) {
+//        this.songRepository = songRepository;
+//    }
 
     // 메인화면 랜덤차트 10개
     public List<Song> getTenRandomSongs() throws Exception {
-        return songRepository.getTenRandomSongs();
+//        return songRepository.getTenRandomSongs();
+        return null;
     }
 
     // 멜론차트 TOP30
     public List<Song> getTopThirtySongs() throws Exception {
-        return songRepository.getTopThirtySongs();
+//        return songRepository.getTopThirtySongs();
+        return null;
     }
 }

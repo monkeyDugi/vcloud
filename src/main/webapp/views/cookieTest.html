@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+    <title>Title</title>
+</head>
+<body>
+최근들은 곡 쿠키 테스트
+
+<script>
+    var recentSongsCookie = 'singer=' + '김범수' + ';'
+                          + 'song='   + '보고싶다' + ';'
+                          + 'url='    + 'url' + ';'
+                          + 'img='    + 'img' + ';';
+
+    // 3일 뒤 만료되는 쿠키 생성
+    $.cookie('recentSongsId', recentSongsCookie, { expires: 30 });
+
+    console.log($.cookie('recentSongsId'));
+</script>
+</body>
+</html>

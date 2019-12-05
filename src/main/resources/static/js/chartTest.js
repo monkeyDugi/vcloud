@@ -8,7 +8,7 @@ $(function() {
 	$.ajax({
 
 		type: "GET"
-	,	url: "/songs/thirty"
+	,	url: "/songs/top/thirty"
 	,	dataType: "JSON"
 	,	contentType: "application/json"
 	,	success: function(obj) {
@@ -23,7 +23,7 @@ $(function() {
 
         for(i=0; i<obj.length; i++) {
             $("body").append("{ id: " + obj[i].id + ", ");
-            $("body").append("rnak : " + obj[i].rank + ", ");
+            $("body").append("rank : " + obj[i].rank + ", ");
             $("body").append("url : " + obj[i].url + ", ");
             $("body").append("img_path : " + obj[i].img_path + ", ");
             $("body").append("singer : " + obj[i].singer + ", ");

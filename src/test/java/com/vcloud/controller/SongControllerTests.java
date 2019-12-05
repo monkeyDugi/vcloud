@@ -62,7 +62,7 @@ public class SongControllerTests {
     public void getTenRandomSongs() throws Exception {
         given(songService.getTenRandomSongs()).willReturn(songs);
 
-        mockMvc.perform(get("/songs/ten"))
+        mockMvc.perform(get("/songs/random/ten"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("김범수")));
 
@@ -74,7 +74,7 @@ public class SongControllerTests {
     public void getTopThirtySongs() throws Exception {
         given(songService.getTopThirtySongs()).willReturn(songs);
 
-        mockMvc.perform(get("/songs/thirty"))
+        mockMvc.perform(get("/songs/top/thirty"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("김범수")));
 
