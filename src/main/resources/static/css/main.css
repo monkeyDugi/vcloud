@@ -18,7 +18,7 @@
 .video_list {}
 .video_list .video-item {float: left;text-align: center;width: 15%;margin-right: 2%;margin-bottom: 20px;}
 .video_list .video-item:nth-child(6n) {margin-right: 0;}
-.video_list .video-item .video-item-img a img {width: 100%;}
+.video_list .video-item .video-item-img img {width: 100%;}
 .video-item-title {margin-top: 5px;}
 .video-item-artist {color: #606060;font-size: 13px;}
 .video-item-info {max-width:170px;margin: 0 auto;}
@@ -65,3 +65,8 @@
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+
+/* 팝업 레이어 */
+.mask {background-color: #000; bottom: 0; left: 0; opacity: 0.5; filter: alpha(opacity = 50); /* IE7 & 8 */ position: fixed; right: 0; top: 0; z-index: 99; display:none;}
+.popup_layer {width:85%;height: 90%;background:#fff; border:solid 1px #ccc; position:fixed; box-shadow: 0px 1px 20px #333; z-index:100; display:none;}
+.popup_layer iframe {width: 100%;height: 100%;}
