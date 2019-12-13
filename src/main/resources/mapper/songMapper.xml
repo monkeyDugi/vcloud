@@ -3,31 +3,14 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.vcloud.domain.SongRepository">
-<!-- 랜덤차트 10개 -->
-	<select id="getTenRandomSongs" resultType="song">
-		SELECT ID
-		     , RANK
-			 , URL
-			 , IMG_PATH
+<!-- 랜덤차트 12개 -->
+	<select id="getTwelveRandomSongs" resultType="song">
+		SELECT URL
+			 , IMG
 			 , SINGER
 			 , TITLE
-		     , LIVE
-		  FROM vcloud.TB_DAY_CHART
+		  FROM TB_SONGS
 		 ORDER BY RAND()
-		 LIMIT 10
-	</select>
-
-<!-- 멜론차트 TOP30 -->
-	<select id="getTopThirtySongs" resultType="song">
-		SELECT ID
-		     , RANK
-		     , URL
-		     , IMG_PATH
-		     , SINGER
-		     , TITLE
-		     , LIVE
-		  FROM vcloud.TB_DAY_CHART
-		 ORDER BY RANK
-		 LIMIT 30
+		 LIMIT 12
 	</select>
 </mapper>

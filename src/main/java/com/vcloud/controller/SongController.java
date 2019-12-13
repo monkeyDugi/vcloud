@@ -36,24 +36,12 @@ public class SongController {
     private SongService songService;
 
     /*
-    * 노래 리스트
-    * count : 10
+    * index화면 랜덤 12개
     * */
-    @GetMapping("/songs/random/ten")
-    @ApiOperation(value = "랜덤차트", notes = "멜론차트 일간 종합장르에서 랜덤으로 10개를 select")
+    @GetMapping("/songs/random/twelve")
+    @ApiOperation(value = "랜덤차트", notes = "멜론차트 일간 종합장르에서 랜덤으로 12개를 select")
     public List<SongDto> getTenRandomSongs() throws Exception {
-        List<Song> songs = songService.getTenRandomSongs();
-
-        return songs.stream()
-                .map(song -> mapper.map(song, SongDto.class))
-                .collect(Collectors.toList());
-    }
-
-    // 멜론차트 TOP30
-    @GetMapping("/songs/top/thirty")
-    @ApiOperation(value = "멜론차트 TOP30", notes = "멜론차트 일간 종합장르에서 TOP30 select")
-    public List<SongDto> getTopThirtySongs() throws Exception {
-        List<Song> songs = songService.getTopThirtySongs();
+        List<Song> songs = songService.getTwelveRandomSongs();
 
         return songs.stream()
                 .map(song -> mapper.map(song, SongDto.class))

@@ -10,18 +10,17 @@
 - swagger-ui : 2.9
 - MyBatis : 3.5
 - Maven : 3.1.1
-- Html : 5
-- JavaScript :
-  => jQuery :
+- Html
+- JavaScript
+- 
 #
 ###REST API SERVER
-- GET /songs/ten => 멜론 일간의 종합차트 10개 랜덤 [GET http://localhost:8080/songs/ten](http://localhost:8080/songs)
-- GET /songs/thirty => 멜론 일간차트 TOP30 [GET http://localhost:8080/songs/thirty](http://localhost:8080/songs)
-- 개발 중 ... 
+- GET /songs/twelve => 멜론 일간의 종합차트 12개 랜덤 [GET http://localhost:8080/songs/random/twelve](http://localhost:8080/songs/random/twelve)
+- 개발 중... 
 #
 
 ###FRONT
-개발 중 ...
+index 화면 개발 중...
 #
 
 

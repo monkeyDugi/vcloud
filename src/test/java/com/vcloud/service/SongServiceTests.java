@@ -27,47 +27,32 @@ import java.util.List;
 public class SongServiceTests {
     private SongService songService;
 
-//    @Mock
-//    private SongRepository songRepository;
+    @Mock
+    private SongRepository songRepository;
 
     @Before
     public void setUp() {
-//        MockitoAnnotations.initMocks(this);
-//        songService = new SongService(songRepository);
+        MockitoAnnotations.initMocks(this);
+        songService = new SongService(songRepository);
     }
 
     // 메인화면 랜덤차트 10개
     @Test
-    public void getTenRandomSongs() throws Exception{
+    public void getTwelveRandomSongs() throws Exception{
         List<Song> songs = new ArrayList<>();
 
         songs.add(Song.builder()
-                    .id("id")
                     .url("url/url")
-                    .img_path("jpg")
+                    .img("jpg")
                     .singer("김범수")
                     .title("보고싶다")
                     .build()
         );
 
-//        given(songRepository.getTenRandomSongs()).willReturn(songs);
+        given(songRepository.getTwelveRandomSongs()).willReturn(songs);
 
-//        assertThat(songService.getTenRandomSongs()).isEqualTo(songs);
+        assertThat(songService.getTwelveRandomSongs()).isEqualTo(songs);
 
-//        verify(songRepository).getTenRandomSongs();
-    }
-
-    // 멜론차트 TOP30
-    @Test
-    public void getTopThirtySongs() throws Exception {
-        List<Song> songs = new ArrayList<>();
-
-        songs.add(Song.builder().singer("김범수").build());
-
-//        given(songRepository.getTopThirtySongs()).willReturn(songs);
-
-//        assertThat(songService.getTopThirtySongs()).isEqualTo(songs);
-
-//        verify(songRepository).getTopThirtySongs();
+        verify(songRepository).getTwelveRandomSongs();
     }
 }

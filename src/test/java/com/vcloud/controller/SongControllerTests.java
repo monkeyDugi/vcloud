@@ -41,43 +41,30 @@ public class SongControllerTests {
     @MockBean
     private SongService songService;
 
-    List<Song> songs;
+    private List<Song> songs;
 
     @Before
     public void setUp() throws Exception {
         songs = new ArrayList<>();
 
         songs.add(Song.builder()
-                .id("1")
                 .url("url/url")
-                .img_path("jpg")
+                .img("jpg")
                 .singer("김범수")
                 .title("보고싶다")
                 .build()
         );
     }
 
-    // 메인화면 랜덤차트 10개
+    // 메인화면 랜덤차트 12개
     @Test
-    public void getTenRandomSongs() throws Exception {
-        given(songService.getTenRandomSongs()).willReturn(songs);
+    public void getTwelveRandomSongs() throws Exception {
+        given(songService.getTwelveRandomSongs()).willReturn(songs);
 
-        mockMvc.perform(get("/songs/random/ten"))
+        mockMvc.perform(get("/songs/random/twelve"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("김범수")));
 
-        verify(songService).getTenRandomSongs();
-    }
-
-    // 멜론차트 TOP30
-    @Test
-    public void getTopThirtySongs() throws Exception {
-        given(songService.getTopThirtySongs()).willReturn(songs);
-
-        mockMvc.perform(get("/songs/top/thirty"))
-                .andExpect(status().isOk())
-                .andExpect(content().string(containsString("김범수")));
-
-        verify(songService).getTopThirtySongs();
+        verify(songService).getTwelveRandomSongs();
     }
 }

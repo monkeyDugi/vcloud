@@ -11,9 +11,8 @@ public class SongTests {
     @Before
     public void init() {
         song = Song.builder()
-                .id("1")
                 .url("url/url")
-                .img_path("image.jpg")
+                .img("image.jpg")
                 .singer("김범수")
                 .title("보고싶다")
                 .build();
@@ -21,9 +20,8 @@ public class SongTests {
 
     @Test
     public void test() {
-        assertThat(song.getId()).isEqualTo("1");
         assertThat(song.getUrl()).isEqualTo("url/url");
-        assertThat(song.getImg_path()).isEqualTo("image.jpg");
+        assertThat(song.getImg()).isEqualTo("image.jpg");
         assertThat(song.getSinger()).isEqualTo("김범수");
         assertThat(song.getTitle()).isEqualTo("보고싶다");
     }
