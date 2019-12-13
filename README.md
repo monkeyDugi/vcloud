@@ -12,7 +12,6 @@
 - Maven : 3.1.1
 - Html
 - JavaScript
-- 
 #
 ###REST API SERVER
 - GET /songs/twelve => 멜론 일간의 종합차트 12개 랜덤 [GET http://localhost:8080/songs/random/twelve](http://localhost:8080/songs/random/twelve)
