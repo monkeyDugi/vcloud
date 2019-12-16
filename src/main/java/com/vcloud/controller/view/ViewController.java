@@ -22,7 +22,12 @@ public class ViewController {
 
     // 메인화면
     @GetMapping("/index")
-    public String mainView() throws Exception {
+    public String indexView() throws Exception {
         return "index";
+    }
+    // 차트화면
+    @GetMapping("/chart")
+    public String chartView() throws Exception {
+        return "chart";
     }
 }

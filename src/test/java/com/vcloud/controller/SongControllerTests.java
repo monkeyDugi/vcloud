@@ -61,7 +61,7 @@ public class SongControllerTests {
     public void getTwelveRandomSongs() throws Exception {
         given(songService.getTwelveRandomSongs()).willReturn(songs);
 
-        mockMvc.perform(get("/songs/random/twelve"))
+        mockMvc.perform(get("/songs/chart/twelve/random"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("김범수")));
 

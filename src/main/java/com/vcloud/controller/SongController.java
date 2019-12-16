@@ -36,11 +36,11 @@ public class SongController {
     private SongService songService;
 
     /*
-    * index화면 랜덤 12개
+    * 차트에서 랜덤 12개
     * */
-    @GetMapping("/songs/random/twelve")
+    @GetMapping("/songs/chart/twelve/random")
     @ApiOperation(value = "랜덤차트", notes = "멜론차트 일간 종합장르에서 랜덤으로 12개를 select")
-    public List<SongDto> getTenRandomSongs() throws Exception {
+    public List<SongDto> getTwelveRandomSongs() throws Exception {
         List<Song> songs = songService.getTwelveRandomSongs();
 
         return songs.stream()

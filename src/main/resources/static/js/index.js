@@ -50,7 +50,7 @@ function onPlayerStateChange(event) {
 
 $.ajax({
     type : "GET"
-,   url :  "/songs/random/twelve"
+,   url :  "/songs/chart/twelve/random"
 ,   dataType : "JSON"
 ,   contentType : "application/json"
 ,   success : function(obj) {
