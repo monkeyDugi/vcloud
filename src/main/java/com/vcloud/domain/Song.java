@@ -22,4 +22,5 @@ public class Song {
     private String img;
     private String singer;
     private String title;
+    private String live;
 }

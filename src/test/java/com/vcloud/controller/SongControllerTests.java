@@ -67,4 +67,16 @@ public class SongControllerTests {
 
         verify(songService).getTwelveRandomSongs();
     }
+
+    // 일간 차트 TOP30
+    @Test
+    public void getTenSongs() throws Exception {
+        given(songService.getTenSongs()).willReturn(songs);
+
+        mockMvc.perform(get("/songs/chart/top/thirty"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("김범수")));
+
+        verify(songService).getTenSongs();
+    }
 }

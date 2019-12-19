@@ -61,7 +61,7 @@ $.ajax({
 
 // 음악 목록 Set
 function songListSet() {
-	for(let i=0; i<songList.length; i++) {
+	for(let i=0; i<=songList.length; i++) {
 		document.getElementsByTagName('url')[i].dataset.url = songList[i].url;
 		document.getElementsByTagName('index')[i].dataset.index = i;
 		document.getElementsByClassName('video-item-title')[i].innerHTML = songList[i].title;

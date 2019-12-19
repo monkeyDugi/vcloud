@@ -36,7 +36,7 @@ public class SongServiceTests {
         songService = new SongService(songRepository);
     }
 
-    // 메인화면 랜덤차트 10개
+    // 메인화면 랜덤차트 12개
     @Test
     public void getTwelveRandomSongs() throws Exception{
         List<Song> songs = new ArrayList<>();
@@ -54,5 +54,25 @@ public class SongServiceTests {
         assertThat(songService.getTwelveRandomSongs()).isEqualTo(songs);
 
         verify(songRepository).getTwelveRandomSongs();
+    }
+
+    // 일간차트 TOP30
+    @Test
+    public void getTenSongs() throws Exception{
+        List<Song> songs = new ArrayList<>();
+
+        songs.add(Song.builder()
+                .url("url/url")
+                .img("jpg")
+                .singer("김범수")
+                .title("보고싶다")
+                .build()
+        );
+
+        given(songRepository.getTenSongs()).willReturn(songs);
+
+        assertThat(songService.getTenSongs()).isEqualTo(songs);
+
+        verify(songRepository).getTenSongs();
     }
 }

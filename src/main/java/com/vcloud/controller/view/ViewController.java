@@ -25,7 +25,7 @@ public class ViewController {
     public String indexView() throws Exception {
         return "index";
     }
-    // 차트화면
+    // 일간차트화면
     @GetMapping("/chart")
     public String chartView() throws Exception {
         return "chart";

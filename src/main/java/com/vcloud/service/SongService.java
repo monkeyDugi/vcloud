@@ -33,4 +33,8 @@ public class SongService {
     public List<Song> getTwelveRandomSongs() throws Exception {
         return songRepository.getTwelveRandomSongs();
     }
+//  일간차트 TOP30
+    public List<Song> getTenSongs() throws Exception {
+        return songRepository.getTenSongs();
+    }
 }

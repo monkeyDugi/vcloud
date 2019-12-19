@@ -18,4 +18,7 @@ import java.util.List;
 public interface SongRepository {
     // index화면 랜덤차트 12개
     List<Song> getTwelveRandomSongs() throws Exception;
+
+    // 일간차트 TOP30
+    List<Song> getTenSongs() throws Exception;
 }

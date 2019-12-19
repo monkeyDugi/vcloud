@@ -15,6 +15,7 @@ public class SongTests {
                 .img("image.jpg")
                 .singer("김범수")
                 .title("보고싶다")
+                .live("live")
                 .build();
     }
 
@@ -24,5 +25,6 @@ public class SongTests {
         assertThat(song.getImg()).isEqualTo("image.jpg");
         assertThat(song.getSinger()).isEqualTo("김범수");
         assertThat(song.getTitle()).isEqualTo("보고싶다");
+        assertThat(song.getLive()).isEqualTo("live");
     }
 }
