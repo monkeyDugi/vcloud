@@ -102,7 +102,7 @@ function onclickVideoIdSet(obj) {
 		videoId = endedVideoIdSet();
 	}
 	
-	videoLoad(videoId);
+	videoLoad(videoId);i
 }
 
 // 지정한 동영상 로드
